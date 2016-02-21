@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="utf=8">
+</head>
+<body>
+Demonstrate bindings with Objects and fields
+
+<br><br>Enter your details below
+<table>
+    <tr>
+        <td>ID</td>
+        <td><input type="text" name="id" ng-model="student.id"/></td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td><input type="text" name="name" ng-model="student.name"/></td>
+    </tr>
+    <tr>
+        <td>Sex</td>
+        <td>
+            <input type="radio" name="gender" value="male" checked ng-model="student.gender">Male<br>
+            <input type="radio" name="gender" value="female" ng-model="student.gender">Female<br>
+            <input type="radio" name="gender" value="other" ng-model="student.gender">Other
+        </td>
+    </tr>
+    <tr>
+        <td>DOB(yyyy/mm/dd)</td>
+        <td><input type="text" name="dob" ng-model="student.dob"/></td>
+    </tr>
+</table>
+
+<br><br>Double check your details below
+<table border=1>
+    <th>Detail Type</th>
+    <th>Detail Value</th>
+    <tr>
+        <td>ID</td>
+        <td>{{student.id}}</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>{{student.name}}</td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>{{student.gender}}</td>
+    </tr>
+    <tr>
+        <td>DOB</td>
+        <td>{{student.dob}}</td>
+    </tr>
+</table>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+</html>
